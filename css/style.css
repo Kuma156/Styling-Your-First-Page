@@ -50,6 +50,9 @@ nav ul{
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 
@@ -98,4 +101,26 @@ nav img {
   justify-content: space-around;
   flex-wrap: wrap;
 
+}
+
+a:hover{
+  color: #dd6600;
+  /* text-decoration: underline; */
+  transition: 0.3s
+}
+
+.flex img:nth-child(even){
+  border-radius: 50%;
+}
+
+img {
+  border: 2px solid #333;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
