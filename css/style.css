@@ -6,6 +6,12 @@ header{
   margin-bottom: 20px;
 }
 
+header img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -15,35 +21,20 @@ body{
   font-size: 150%;
 }
 
-main{
-  background-color: antiquewhite;
-  font-size: 18px;
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
 nav{
-  background-color: #b3d792;
+  background-color: #bfbfbf;
   color: white;
   padding: 10px 0;
   text-align: center;
   display: inline-block;
   width: 80%;
-}
-/*li{
-  display: inline-block;
-  margin: 150px;
-}*/
-
-h1{
-  text-align: center;
-  color: rgb(84, 136, 232);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 32px;
-  margin: 20px 0; 
-}
-
-p{
-  line-height: 1.6;
-  margin: 10px 20px;
 }
 
 nav ul{
@@ -52,8 +43,45 @@ nav ul{
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
+
+nav img {
+  width: 10%;
+}
+
+nav a {
+  background-color: #666;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+nav a:hover{
+  background-color: #0051ff;
+  text-decoration: underline; 
+  transition: 0.3s;
+}
+
+/*li{
+  display: inline-block;
+  margin: 150px;
+}*/
+
+h1 {
+  text-align: center;
+  font-family: cursive;
+  color: #3b4cc0;
+}
+
+p{
+  line-height: 1.6;
+  margin: 10px 20px;
+}
+
+
 
 
 
@@ -72,14 +100,19 @@ footer{
   color: #fff;
   padding: 8px;
   z-index: 100;
+  font-weight: italic;
 }
 
 .skip-link:focus {
   top: 10px;
 }
 
-nav img {
-  width: 10%;
+.skip-link:hover {
+  background: #555;
+  text-decoration: none;
+  transition: 0.3s;
+  top: 0px;
+  left: 0px;
 }
 
 .grid{
@@ -106,7 +139,7 @@ nav img {
 a:hover{
   color: #dd6600;
   /* text-decoration: underline; */
-  transition: 0.3s
+  transition: 0.3s;
 }
 
 .flex img:nth-child(even){
@@ -119,8 +152,22 @@ img {
   border-radius: 10px;
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+.hover-img {
+  border: 2px solid #333;
+  padding: 5px;
+  border-radius: 10px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hover-img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 20px; */
 }
