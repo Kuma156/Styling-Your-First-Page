@@ -160,7 +160,8 @@ img {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.hover-img:hover {
+.hover-img:hover,
+.hover-img:focus {
   opacity: 1;
   transform: scale(1.05);
 }
@@ -170,6 +171,38 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* gap: 20px; */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item.zoom img {
+  transform: scale(1.5);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item.show-caption .caption {
+  opacity: 1;
 }
 
 #image {
